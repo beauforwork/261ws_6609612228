@@ -12,13 +12,17 @@ function submitLogin() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Application-Key': 'TU7908dee6d8b885c29f0457b4b709233032e25f50e6554a70f84832c60159d12e3b0bd6aa3c4332012bcf227261a0b51c'
+            'Application-Key': 'TUebd96a692d6364dd0d2858bc11226e8096758e91ac85c41736c4497830cab3a9a3c0848750e4ac8f0f273d0773a7b0e2'
         },
         body: jsonData
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('message').innerText = JSON.stringify(data);
+        document.getElementById('message').innerText = data.message;
+        if (data.type == "student" || data.type == "employee") {
+            document.getElementById('sid').innerText = data.username;
+            document.getElementById('name').innerText = `Welcome ${data.displayname_en}!`;
+        }
     })
     .catch(error => console.error('Error:', error));
 }
