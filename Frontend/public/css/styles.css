@@ -1,47 +1,90 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #FFF5F3; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Container for login form */
 .login-container {
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
     text-align: center;
-    margin-bottom: 20px;
+    font-family: 'McLaren';
 }
 
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: #ffc40a; 
+}
+
+/* Labels */
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
 }
 
-input {
+/* Input fields */
+input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2f2e2c; /* Blue border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    background-color: #FEF9E7; /* Light blue background */
 }
 
+/* Input fields focus */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #104e8b; /* Darker blue on focus */
+    outline: none;
+    background-color: #e6f2ff; /* Lightened blue when focused */
+}
+
+/* Login button */
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ffc40a;
     border: none;
-    color: #fff;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'McLaren';
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #FF5733; 
 }
 
-#message {
-    margin-top: 20px;
+/* Message, sid, and name divs */
+#message, #sid, #name {
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: 'McLaren';
+    color: #333;
     text-align: center;
 }
+
+/* For extra spacing between form elements */
+form div {
+    margin-bottom: 10px;
+}
+

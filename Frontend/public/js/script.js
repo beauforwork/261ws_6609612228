@@ -21,7 +21,7 @@ function submitLogin() {
         document.getElementById('message').innerText = data.message;
         if (data.type == "student" || data.type == "employee") {
             document.getElementById('sid').innerText = data.username;
-            document.getElementById('name').innerText = `Welcome ${data.displayname_en}!`;
+            document.getElementById('name').innerText = `Welcome ${data.type} ${data.displayname_en} !`;
         }
     })
     .catch(error => console.error('Error:', error));
